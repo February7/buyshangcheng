@@ -1,0 +1,6 @@
+<button 
+type="primary" 
+plain 
+open-type="getUserInfo"
+bindgetuserinfo="handleGetuserinfo" 
+>请求授权</button>

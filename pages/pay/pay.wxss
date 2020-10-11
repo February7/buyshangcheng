@@ -1,0 +1,103 @@
+page {
+  padding-bottom: 90rpx;
+}
+
+.address_warper .user_address_info {
+  padding: 20rpx;
+  display: flex;
+}
+.address_warper .user_address_info .user_info {
+  flex: 4;
+}
+.address_warper .user_address_info .user_phone_num {
+  flex: 2;
+  text-align: right;
+}
+
+.cart_list_warper {
+  margin-top: 20rpx;
+}
+.cart_list_warper .cart_title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #B03A2E;
+  border-top: 1rpx solid currentColor;
+  border-bottom: 1rpx solid currentColor;
+  padding: 20rpx;
+}
+.cart_list_warper .cart_list_item {
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.cart_list_warper .cart_list_item navigator {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_list_warper .cart_list_item navigator image {
+  width: 80%;
+}
+.cart_list_warper .cart_list_item .goods_info {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cart_list_warper .cart_list_item .goods_info .goods_name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.cart_list_warper .cart_list_item .goods_info .goods_price_tool {
+  display: flex;
+  justify-content: space-between;
+}
+.cart_list_warper .cart_list_item .goods_info .goods_price_tool .goods_price {
+  color: #B03A2E;
+  font-size: 30rpx;
+}
+.cart_list_warper .cart_list_item .goods_info .goods_price_tool .edit_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_list_warper .cart_list_item .goods_info .goods_price_tool .edit_row .goods_num {
+  width: 55rpx;
+  height: 55rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bdt_tools {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  height: 90rpx;
+  border-top: 1rpx solid #ccc;
+}
+.bdt_tools .price_row {
+  flex: 5;
+  text-align: right;
+  padding-right: 10rpx;
+}
+.bdt_tools .price_row .total_price_row .total_price {
+  color:#B03A2E;
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.bdt_tools .cart_order_pay {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  color: white;
+  background-color: #B03A2E;
+}

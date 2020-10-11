@@ -1,0 +1,41 @@
+import {request} from "../../request/index"
+Page({
+  data: {
+    swiperList:[],
+    navigatorList:[],
+    floorList:[],
+    isClass:''
+  },
+  onLoad(options){
+    this.getSwiperList();
+    this.getNavigatorList();
+    this.getFloorList();
+  },
+  getSwiperList(){
+    request({url:'/home/swiperdata'}).then(
+      res=>{
+        this.setData({
+          swiperList:res
+        })
+      }
+    )
+  },
+  getNavigatorList(){
+    request({url:'/home/catitems'}).then(
+      res=>{
+        this.setData({
+          navigatorList:res
+        })
+      }
+    )
+  },
+  getFloorList(){
+    request({url:'/home/floordata'}).then(
+      res=>{
+        this.setData({
+          floorList:res
+        })
+      }
+    )
+  }
+})

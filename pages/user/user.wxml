@@ -1,0 +1,83 @@
+
+<view class="user_info_warper">
+    <view wx:if="{{userInfo}}" class="user_img_warper">
+        <image class="user_bg"  src="{{userInfo.avatarUrl}}" />
+        <view class="user_info">
+            <image  src="{{userInfo.avatarUrl}}" />
+            <view class="nick_name">{{userInfo.nickName}}</view>
+        </view>
+    </view>
+    <view wx:else class="user_login">
+        <navigator url="/pages/login/login">登录</navigator>
+    </view>
+</view>
+
+<view class="user_content_warper">
+    <view class="user_content_main">
+
+        <view class="history_warper">
+            <navigator class="his_item">
+                <view class="his_num">0</view>
+                <view class="his_value">收藏的店铺</view>
+            </navigator>
+            <navigator url="/pages/collect/collect" class="his_item">
+                <view class="his_num">{{collectionNum}}</view>
+                <view class="his_value">收藏的商品</view>
+            </navigator>
+            <navigator class="his_item">
+                <view class="his_num">0</view>
+                <view class="his_value">关注的商品</view>
+            </navigator>
+            <navigator class="his_item">
+                <view class="his_num">0</view>
+                <view class="his_value">我的足迹</view>
+            </navigator>
+        </view>
+
+        <view class="order_warper">
+            <view class="order_title">我的订单</view>
+            <view class="order_row">
+                <navigator url="/pages/order/order?type=1" class="order_item">
+                    <view class="iconfont icon-order"></view>
+                    <view class="order_text">全部订单</view>
+                </navigator>
+                <navigator url="/pages/order/order?type=2" class="order_item">
+                    <view class="iconfont icon-daifukuan"></view>
+                    <view class="order_text">待付款</view>
+                </navigator>
+                <navigator url="/pages/order/order?type=3" class="order_item">
+                    <view class="iconfont icon-daishouhuo01"></view>
+                    <view class="order_text">待收货</view>
+                </navigator>
+                <navigator class="order_item">
+                    <view class="iconfont icon-tuikuan"></view>
+                    <view class="order_text">退款/退货</view>
+                </navigator>
+            </view>
+        </view>
+
+        <view class="address_guli">
+            收货地址管理
+        </view>
+
+
+        <view class="app_info_warper">
+            <view class="app_info_contact">
+                <text >联系客服</text>
+                <text >400-618-4000</text>
+            </view>
+            <navigator url="/pages/feedback/feedback" class="app_info_feedback">
+                意见反馈
+            </navigator>
+            <view class="app_info_about_us">
+                关于我们
+            </view>
+        </view>
+
+        <view class="recommed_app">
+            把应用推荐给其他人
+        </view>
+
+    </view>
+</view>
+

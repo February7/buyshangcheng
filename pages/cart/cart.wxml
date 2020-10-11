@@ -1,0 +1,70 @@
+<view class="cart-view">
+  <view class="cart-btn" wx:if="{{!address}}">
+    <button type="primary" plain bindtap="handleAddress">请添加收货地址</button>
+  </view>
+  <view class="cart-content" wx:else>
+    <view class="cart-content-info">
+      <view>收货人:{{address.userName}}</view>
+      <view>{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+    </view>
+    <view class="cart-content-tel">
+      <view>{{address.telNumber}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="cart-title">
+  购物车
+</view>
+
+<block wx:if="{{cart.length>0}}">
+    <view class="cart-commodity" wx:for="{{cart}}"  wx:key="goods_id" wx:for-item="cartCommodityItem">
+    <view class="commodity-chk">
+      <checkbox-group  bindchange="handleItemChange" data-id="{ {cartCommodityItem.goods_id}}">
+        <checkbox checked="{{cartCommodityItem.checked}}"></checkbox>
+      </checkbox-group>
+    </view>
+    <view class="commodity-img">
+      <navigator>
+        <image mode="widthFix" src="{{cartCommodityItem.goods_big_logo}}"></image>
+      </navigator>
+    </view>
+    <view class="commodity-info">
+      <view class="commodity-info-title">
+        <text>{{cartCommodityItem.goods_name}}</text>
+      </view>
+      <view class="commodity-info-price">
+        <text class="commodity-info-price-text">￥{{cartCommodityItem.goods_price}}</  text>
+        <view class="commodity-info-price-btn">
+          <view class="commodity-info-price-add" bindtap="handleNmEdit" data-id="{  {cartCommodityItem.goods_id}}" data-opration="{{1}}">+</view>
+          <view class="commodity-info-price-num">{{cartCommodityItem.num}}</view>
+          <view class="commodity-info-price-less" bindtap="handleNmEdit" data-id="{ {cartCommodityItem.goods_id}}" data-opration="{{-1}}">-</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+
+<block wx:else>
+    <image mode="widthFix" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588071307813&di=c86e76335a1a528674979e86be9460af&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fe1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658"></image>
+</block>
+
+<view class="cart-btm">
+  <view class="cart-btm-chk">
+    <checkbox-group bindchange="handleAllCheckedChange">
+      <checkbox checked="{{allChecked}}">全选</checkbox>
+    </checkbox-group>
+  </view>
+  <view class="cart-btm-price">
+    <view class="cart-btm-price-content">
+      <text>合计:</text>
+      <text class="cart-btm-price-text">￥{{totalPrice}}</text>
+    </view>
+    <view class="cart-btm-price-freight">
+      包含运费
+    </view>
+  </view>
+  <view class="cart-btm-btn" bindtap="handleOrderPay">
+    结算({{totalNum}})
+  </view>
+</view>

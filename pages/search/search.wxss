@@ -1,0 +1,39 @@
+page {
+  background-color: #edece8;
+  padding: 20rpx;
+}
+.serach_row {
+  display: flex;
+  padding-right: 20rpx;
+}
+.serach_row input {
+  flex: 1;
+  background-color: #fff;
+  height: 60rpx;
+  padding-left: 30rpx;
+}
+.serach_row button {
+  width: 110rpx;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0rpx  20rpx;
+  font-size: 26rpx;
+  font-weight: normal;
+}
+.serach_result_warper {
+  margin-top: 30rpx;
+}
+.serach_result_warper .result_item {
+  background-color: #fff;
+  border-bottom: 1rpx solid #ccc;
+  padding: 20rpx 15rpx;
+  font-size: 28rpx;
+  /* 只展示一行，溢出后使用...表示 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 95%;
+}

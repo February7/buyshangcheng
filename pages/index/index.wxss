@@ -1,0 +1,46 @@
+.search {
+  background-color: #117A65;
+  padding: 20rpx 10rpx;
+}
+
+.swiper-view swiper{
+  width: 100%;
+  height: calc(750rpx * 340 / 750);
+}
+.swiper-view image {
+  width: 100%;
+}
+
+.navigation-view {
+  width: 100%;
+  display: flex;
+}
+.navigator-view-content {
+  padding: 10px;
+  flex: 1;
+}
+.navigator-view-content image {
+  width: 100%;
+}
+
+.floor-view-content image {
+  width: 100%;
+}
+.floor-content-title {
+  padding: 20rpx 0;
+}
+.floor-content-list {
+  display: grid;
+  grid-template: 
+    "优质服装 春季热门 爆款清仓" 1fr
+    "优质服装 倒春寒 砰砰心动" 1fr
+    /1fr 1fr 1fr;
+  align-items: flex-start;
+  gap: 20rpx 20rpx;
+}
+.floor-content-list image:nth-of-type(1) {
+  grid-area: 优质服装;
+}
+.floor-content-list image:nth-of-type(n+2) {
+  height: 190rpx !important;
+}

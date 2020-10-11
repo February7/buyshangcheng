@@ -1,0 +1,12 @@
+.search {
+  background-color: #117A65;
+  padding: 20rpx 10rpx;
+}
+navigator {
+  background-color: white;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 5px;
+  color: #BFC9CA;
+  font-size: 14px;
+}

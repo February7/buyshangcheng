@@ -1,0 +1,4 @@
+<view class="img_warper">
+    <image class="choose_img" src="{{src}}" />
+    <icon class="img_delete" type="clear" size="23" color="red"></icon>      
+</view>

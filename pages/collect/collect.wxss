@@ -1,0 +1,52 @@
+.collection_main {
+  background-color: #f3f4f6;
+}
+.collection_main .collect_title {
+  padding: 40rpx 0;
+}
+.collection_main .collect_title .title_item {
+  background-color: #fff;
+  padding: 10rpx;
+  border: 1rpx solid #ccc;
+  margin-left: 20rpx;
+}
+.collection_main .collect_title .active {
+  color: #B03A2E;
+  border-color: currentColor;
+}
+.collection_main .collect_content {
+  margin-top: 30rpx;
+}
+.collection_main .collect_content navigator {
+  display: flex;
+  color: black;
+  background-color: #fff;
+  border-bottom: 1rpx solid #ccc;
+}
+.collection_main .collect_content navigator .img_warper {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.collection_main .collect_content navigator .img_warper image {
+  width: 70%;
+}
+.collection_main .collect_content navigator .goods_info_warper {
+  flex: 3;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.collection_main .collect_content navigator .goods_info_warper .goods_name {
+  /* 让第二行有...省略号 */
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.collection_main .collect_content navigator .goods_info_warper .goods_price {
+  color: #B03A2E;
+  font-size: 32rpx;
+}

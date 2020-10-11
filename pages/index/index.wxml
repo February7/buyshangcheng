@@ -1,0 +1,28 @@
+<search></search>
+
+<view class="swiper-view">
+  <swiper indicator-dots indicator-color="white" indicator-active-color="#BFC9CA" autoplay circular interval="3000">
+    <swiper-item wx:for="{{swiperList}}" wx:key="goods_id" wx:for-item="swiperItem" wx:for-index="swiperIndex">
+      <navigator url="{{swiperItem.navigator_url}}" open-type="{{swiperItem.open_type}}">
+        <image mode="widthFix" src="{{swiperItem.image_src}}"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="navigation-view">
+  <navigator class="navigator-view-content" wx:for="{{navigatorList}}" wx:key="*this" wx:for-item="navigatorItem" wx:for-index="navigatorIndex" url="{{navigatorItem.navigator_url}}" open-type="{{navigatorItem.open_type}}">
+    <image mode="widthFix" src="{{navigatorItem.image_src}}"></image>
+  </navigator>
+</view>
+
+<view class="floor-view">
+  <view class="floor-view-content" wx:for="{{floorList}}" wx:key="*this" wx:for-item="floorItem" wx:for-index="floorIndex">
+    <view class="floor-content-title">
+      <image mode="widthFix" src="{{floorItem.floor_title.image_src}}"></image>
+    </view>
+    <view class="floor-content-list">
+      <image class="{{isClass}}" wx:for="{{floorItem.product_list}}" wx:key="*this" mode="widthFix" src="{{item.image_src}}"></image>
+    </view>
+  </view>
+</view>

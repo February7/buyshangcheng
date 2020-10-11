@@ -1,0 +1,15 @@
+<view class="serach_row">
+    <input value="{{iptValue}}" bindinput="handleInput" placeholder="请输入要搜索的商品" />
+    <button bindtap="handleCancle" hidden="{{!isFocus}}" class="btn_cancel" size="mini" >取消</button>
+</view>
+
+<view class="serach_result_warper">
+    <navigator class="result_item" 
+        wx:for="{{goods}}"
+        wx:key="goods_id"
+        url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}"
+    >
+       {{item.goods_name}}
+    </navigator>
+    
+</view>
